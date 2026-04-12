@@ -6,6 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/frontend-static-travelmap-1/',
   plugins: [
     vue(),
     vueDevTools(),
