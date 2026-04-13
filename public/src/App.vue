@@ -11,10 +11,10 @@ import mapMyJourneyLogo from '../assets/images/mapMyJourneyLogo.svg'
   <nav class="fixed top-0 left-0 right-0 bg-white z-50 border-b border-gray-100">
     <input id="menu-toggle" type="checkbox" class="burger-checkbox" />
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-2">
+      <a href="#" class="flex items-center gap-2">
         <img :src="mapMyJourneyLogo" alt="MapMyJourney Logo" class="w-8 h-8" />
         <span class="font-bold text-gray-900">MapMyJourney</span>
-      </div>
+      </a>
       <!-- Desktop Nav -->
       <div class="hidden md:flex gap-8 text-sm text-gray-600">
         <a href="#warum" class="hover:text-blue-600 transition-colors">Warum MapMyJourney</a>
