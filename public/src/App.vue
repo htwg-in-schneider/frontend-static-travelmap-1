@@ -40,7 +40,7 @@ import mapMyJourneyLogo from '../assets/images/mapMyJourneyLogo.svg'
   </nav>
 
   <!-- Hero -->
-  <section class="min-h-screen flex items-center px-6">
+  <section class="min-h-screen flex items-center px-6 pt-20 md:pt-0">
     <div class="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-12">
       <div class="flex-1">
         <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
