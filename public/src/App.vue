@@ -9,16 +9,33 @@ import mapMyJourneyLogo from '../assets/images/mapMyJourneyLogo.svg'
 <template>
   <!-- Navbar -->
   <nav class="fixed top-0 left-0 right-0 bg-white z-50 border-b border-gray-100">
+    <input id="menu-toggle" type="checkbox" class="burger-checkbox" />
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
       <div class="flex items-center gap-2">
         <img :src="mapMyJourneyLogo" alt="MapMyJourney Logo" class="w-8 h-8" />
         <span class="font-bold text-gray-900">MapMyJourney</span>
       </div>
-      <div class="flex gap-8 text-sm text-gray-600">
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex gap-8 text-sm text-gray-600">
         <a href="#warum" class="hover:text-blue-600 transition-colors">Warum MapMyJourney</a>
         <a href="#features" class="hover:text-blue-600 transition-colors">Features</a>
         <a href="#so-funktionierts" class="hover:text-blue-600 transition-colors">So funktioniert's</a>
       </div>
+      <!-- Burger Menu -->
+      <label for="menu-toggle" class="md:hidden cursor-pointer" aria-label="Menü öffnen">
+        <svg class="w-6 h-6 text-gray-700 burger-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg class="w-6 h-6 text-gray-700 close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </label>
+    </div>
+    <!-- Mobile Nav -->
+    <div class="mobile-menu border-t border-gray-100 bg-white px-6 py-4 flex-col gap-4 text-sm text-gray-600">
+      <a href="#warum" class="hover:text-blue-600 transition-colors">Warum MapMyJourney</a>
+      <a href="#features" class="hover:text-blue-600 transition-colors">Features</a>
+      <a href="#so-funktionierts" class="hover:text-blue-600 transition-colors">So funktioniert's</a>
     </div>
   </nav>
 
@@ -158,4 +175,34 @@ import mapMyJourneyLogo from '../assets/images/mapMyJourneyLogo.svg'
   </footer>
 </template>
 
-<style scoped></style>
+<style scoped>
+.burger-checkbox {
+  display: none;
+}
+
+.close-icon {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.burger-checkbox:checked ~ .mobile-menu {
+  display: flex;
+}
+
+.burger-checkbox:checked ~ div .burger-icon {
+  display: none;
+}
+
+.burger-checkbox:checked ~ div .close-icon {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
+</style>
