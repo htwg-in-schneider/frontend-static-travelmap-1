@@ -10,7 +10,10 @@ import mapMyJourneyLogo from '../assets/images/mapMyJourneyLogo.svg'
   <!-- Navbar -->
   <nav class="fixed top-0 left-0 right-0 bg-white z-50 border-b border-gray-100">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <img :src="mapMyJourneyLogo" alt="MapMyJourney Logo" class="w-8 h-8" />
+      <div class="flex items-center gap-2">
+        <img :src="mapMyJourneyLogo" alt="MapMyJourney Logo" class="w-8 h-8" />
+        <span class="font-bold text-gray-900">MapMyJourney</span>
+      </div>
       <div class="flex gap-8 text-sm text-gray-600">
         <a href="#warum" class="hover:text-blue-600 transition-colors">Warum MapMyJourney</a>
         <a href="#features" class="hover:text-blue-600 transition-colors">Features</a>
@@ -29,11 +32,11 @@ import mapMyJourneyLogo from '../assets/images/mapMyJourneyLogo.svg'
           Deine Erinnerungen.
         </h1>
         <p class="mt-4 text-gray-500 max-w-md">
-          Verknüpfe deine Reisefotos mit einem deinem virtuellen Globus und erlebe deine Abenteuer neu.
+          Verknüpfe deine Reisefotos mit deinem virtuellen Globus und erlebe deine Abenteuer neu.
         </p>
         <a
           href="#warum"
-          class="mt-6 inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-700 transition-colors"
+          class="mt-6 inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-2xl hover:bg-blue-700 transition-colors"
         >
           Leg los!
         </a>
@@ -116,17 +119,26 @@ import mapMyJourneyLogo from '../assets/images/mapMyJourneyLogo.svg'
       <div class="flex-1">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">So funktioniert's</h2>
         <div class="space-y-8">
-          <div>
-            <h3 class="font-bold text-blue-600 mb-1">Schritt 1: Lade deine Fotos hoch.</h3>
-            <p class="text-gray-500">Einfach Bilder auswählen.</p>
+          <div class="flex items-start gap-4">
+            <span class="shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Lade deine Fotos hoch.</h3>
+              <p class="text-gray-500">Einfach Bilder auswählen.</p>
+            </div>
           </div>
-          <div>
-            <h3 class="font-bold text-blue-600 mb-1">Schritt 2: Dein Globus füllt sich.</h3>
-            <p class="text-gray-500">Jedes Bild erscheint als Aufnahmeort auf deiner Weltkarte.</p>
+          <div class="flex items-start gap-4">
+            <span class="shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</span>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Dein Globus füllt sich.</h3>
+              <p class="text-gray-500">Jedes Bild erscheint als Aufnahmeort auf deiner Weltkarte.</p>
+            </div>
           </div>
-          <div>
-            <h3 class="font-bold text-blue-600 mb-1">Schritt 3: Erlebe und teile.</h3>
-            <p class="text-gray-500">Sammle Erinnerungen und lass dich zu neuen Reisen inspirieren.</p>
+          <div class="flex items-start gap-4">
+            <span class="shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</span>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Erlebe und teile.</h3>
+              <p class="text-gray-500">Sammle Erinnerungen und lass dich zu neuen Reisen inspirieren.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -138,7 +150,11 @@ import mapMyJourneyLogo from '../assets/images/mapMyJourneyLogo.svg'
 
   <!-- Footer -->
   <footer class="bg-blue-600 py-8 text-center text-white text-sm">
-    <p>&copy; 2026 MapMyJourney. Alle Rechte vorbehalten.</p>
+    <div class="flex justify-center gap-6 mb-4">
+      <a href="#warum" class="hover:underline">Warum MapMyJourney</a>
+      <a href="#features" class="hover:underline">Features</a>
+      <a href="#so-funktionierts" class="hover:underline">So funktioniert's</a>
+    </div>
   </footer>
 </template>
 
