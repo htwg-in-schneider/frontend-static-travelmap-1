@@ -10,7 +10,7 @@ import mapMyJourneyLogo from '../assets/images/mapMyJourneyLogo.svg'
   <!-- Navbar -->
   <nav class="fixed top-0 left-0 right-0 bg-white z-50 border-b border-gray-100">
     <input id="menu-toggle" type="checkbox" class="burger-checkbox" />
-    <div class="max-w-6xl mx-auto md:px-0jkjjqqqqqq px-6 py-4 flex items-center justify-between">
+    <div class="max-w-6xl mx-auto md:px-0 px-6 py-4 flex items-center justify-between">
       <a href="#" class="flex items-center gap-2">
         <img :src="mapMyJourneyLogo" alt="MapMyJourney Logo" class="w-8 h-8" />
         <span class="font-bold text-gray-900">MapMyJourney</span>
